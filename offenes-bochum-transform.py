@@ -14,7 +14,7 @@ product_group_data_read = 0
 product_data = csv.reader(open('haushalt-bochum-10-2011.csv', 'rb'), delimiter=',', quotechar='"')
 
 #first line
-print "id,parent_id,parent_descr,object_id,object_descr,year,amount"
+print "unique_id,parent_id,parent_descr,object_id,object_descr,year,amount"
 
 # some definitions
 current_line = -1
