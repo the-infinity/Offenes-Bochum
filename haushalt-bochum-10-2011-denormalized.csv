@@ -1,4 +1,4 @@
-uniqueid,produktbereich.id,produktbereich.label,produkt.id,produkt.label,year,type,amount,earning,expense
+uniqueid,produktbereich.id,produktbereich.label,produkt.id,produkt.label,type,year,amount,earning,expense
 1,11,"Innere Verwaltung",1101,"Politische Gremien","expense",2009,3474740,0,3474740
 2,11,"Innere Verwaltung",1101,"Politische Gremien","expense",2010,3540662,0,3540662
 3,11,"Innere Verwaltung",1101,"Politische Gremien","expense",2011,3607029,0,3607029
