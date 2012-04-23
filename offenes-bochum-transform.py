@@ -14,7 +14,7 @@ product_group_data_read = 0
 product_data = csv.reader(open('haushalt-bochum-10-2011.csv', 'rb'), delimiter=',', quotechar='"')
 
 #first line
-print "uniqueid,produktbereich.id,produktbereich.label,produkt.id,produkt.label,year,amount"
+print "uniqueid,produktbereich.id,produktbereich.label,produkt.id,produkt.label,year,earning,expense"
 
 # some definitions
 current_line = -1
@@ -45,7 +45,13 @@ for product_data_row in product_data:
     if (current_value == ""):
       current_value = 0
     current_value = int(current_value)
-    print "%s,%s,\"%s\",%s,\"%s\",%s,%s"%(unique_id, current_product_group_id, current_product_group_name, current_product_id, current_product_name, current_year, current_value)
+    if (current_value < 0):
+      current_earning = current_value
+      current_expense = 0
+    else:
+      current_earning = 0
+      current_expense = current_value
+    print "%s,%s,\"%s\",%s,\"%s\",%s,%s,%s"%(unique_id, current_product_group_id, current_product_group_name, current_product_id, current_product_name, current_year, current_earning, current_expense)
     unique_id+=1
     if (current_line == 7):
       current_line = 0
